@@ -1,7 +1,15 @@
 alias ll="ls -alF"
-alias create-nx-workspace="npx create-nx-workspace --packageManager=yarn"
 alias k="kubectl"
+alias lg="lazygit"
 
 kn() {
-  kubectl config set-context --current --namespace="$1"
+    kubectl config set-context --current --namespace=$1
+}
+
+cx() {
+  mkdir -p "$1" && cd "$1"
+}
+
+cl() {
+  cd "$1" && ls -alF
 }
