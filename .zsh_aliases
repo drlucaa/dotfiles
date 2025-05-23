@@ -1,0 +1,7 @@
+alias ll="ls -alF"
+alias create-nx-workspace="npx create-nx-workspace --packageManager=yarn"
+alias k="kubectl"
+
+kn() {
+  kubectl config set-context --current --namespace="$1"
+}

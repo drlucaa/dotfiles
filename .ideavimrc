@@ -1,0 +1,406 @@
+" -----------------------------
+" Basic Editor Settings
+" -----------------------------
+set scrolloff=10
+set relativenumber
+set number
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+set matchpairs+=<:>
+set which-key
+
+" -----------------------------
+" Which Key Settings
+" -----------------------------
+set notimeout
+let g:WhichKey_ShowVimActions = "true"
+
+" -----------------------------
+" Leader Key Assignment
+" -----------------------------
+let mapleader = " "
+
+" -----------------------------
+" Search Improvements
+" -----------------------------
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" -----------------------------
+" Enable Built-in Plugins
+" -----------------------------
+set surround
+set highlightedyank
+set sneak
+set nerdtree
+set ideajoin
+set multiple-cursors
+set commentary
+
+" -----------------------------
+" Basic Key Mappings
+" -----------------------------
+inoremap jj <Esc>
+" WhichKey description (non-leader, basic mapping)
+let g:WhichKeyDesc_jj = "jj Exit insert mode"
+
+noremap U <C-r>
+let g:WhichKeyDesc_U = "U Redo last undone change"
+
+" map black whole register
+noremap \ "_
+
+noremap <Esc> :nohlsearch<CR><Esc>
+let g:WhichKeyDesc_Esc = "<Esc> Clear search highlighting"
+
+" paste over without overwriting default register
+xnoremap p P
+
+map <leader>0 <Action>(ActivateProjectToolWindow)
+let g:WhichKeyDesc_0 = "<Space>0 Activate project tool window"
+
+" -----------------------------
+" Window Navigation
+" -----------------------------
+nmap <C-h> <C-w>h
+let g:WhichKeyDesc_C_h = "<C-h> Move to left window"
+
+nmap <C-j> <C-w>j
+let g:WhichKeyDesc_C_j = "<C-j> Move to window below"
+
+nmap <C-k> <C-w>k
+let g:WhichKeyDesc_C_k = "<C-k> Move to window above"
+
+nmap <C-l> <C-w>l
+let g:WhichKeyDesc_C_l = "<C-l> Move to right window"
+
+" -----------------------------
+" Window Management (<leader>w)
+" -----------------------------
+map <leader>wv <Action>(MoveTabRight)
+map <leader>wh <Action>(MoveTabDown)
+map <leader>ww <Action>(Unsplit)
+map <leader>wa <Action>(UnsplitAll)
+
+" Group description for window management (shown as a group label in which-key)
+let g:WhichKeyDesc_windows   = "<Space>w Windows"
+let g:WhichKeyDesc_windows_v = "<Space>wv Split window vertically"
+let g:WhichKeyDesc_windows_h = "<Space>wh Split window horizontally"
+let g:WhichKeyDesc_windows_w = "<Space>ww Close current split"
+let g:WhichKeyDesc_windows_a = "<Space>wa Close all other splits"
+
+" -----------------------------
+" Tab Navigation
+" -----------------------------
+nmap <S-h> :tabprevious<CR>
+nmap <S-l> :tabnext<CR>
+let g:WhichKeyDesc_tab_prev = "<S-h> Previous tab"
+let g:WhichKeyDesc_tab_next = "<S-l> Next tab"
+
+" -----------------------------
+" Line Movement
+" -----------------------------
+vmap <S-j> <Action>(MoveLineDown)
+vmap <S-k> <Action>(MoveLineUp)
+let g:WhichKeyDesc_line_down = "<S-j> Move selected lines down"
+let g:WhichKeyDesc_line_up   = "<S-k> Move selected lines up"
+
+" -----------------------------
+" Word Movements
+" -----------------------------
+noremap w [w
+let g:WhichKeyDesc_w = "w Move to beginning of next sub-word (case-sensitive)"
+
+noremap e ]w
+let g:WhichKeyDesc_e = "e Move to end of sub-word (case-sensitive)"
+
+noremap b [b
+let g:WhichKeyDesc_b = "b Move to beginning of previous sub-word (case-sensitive)"
+
+noremap ge ]b
+let g:WhichKeyDesc_ge = "ge Move to beginning of current sub-word (case-sensitive)"
+
+noremap W w
+let g:WhichKeyDesc_W = "W Move forward one word (case-insensitive)"
+
+noremap E e
+let g:WhichKeyDesc_E = "E Move to end of word (case-insensitive)"
+
+noremap B b
+let g:WhichKeyDesc_B = "B Move backward one word (case-insensitive)"
+
+noremap gE ge
+let g:WhichKeyDesc_gE = "gE Move to beginning of word (case-insensitive)"
+
+" -----------------------------
+" Multiple Cursors
+" -----------------------------
+nmap <C-n> <Plug>NextWholeOccurrence
+xmap <C-n> <Plug>NextWholeOccurrence
+let g:WhichKeyDesc_C_n = "<C-n> Add cursor at next whole occurrence"
+
+nmap g<C-n> <Plug>NextOccurrence
+xmap g<C-n> <Plug>NextOccurrence
+let g:WhichKeyDesc_gC_n = "g<C-n> Add cursor at next occurrence (partial matches)"
+
+xmap <C-x> <Plug>SkipOccurrence
+let g:WhichKeyDesc_C_x = "<C-x> Skip current occurrence"
+
+xmap <C-p> <Plug>RemoveOccurrence
+let g:WhichKeyDesc_C_p = "<C-p> Remove last added cursor"
+
+" -----------------------------
+" File & Project Navigation (<leader>f)
+" -----------------------------
+map <leader>ff <Action>(GotoFile)
+map <leader>fd <Action>(NewDir)
+map <leader>fn <Action>(NewFile)
+map <leader>fo <Action>(OpenFile)
+map <leader>fr <Action>(RenameFile)
+map <leader>fc <Action>(GotoClass)
+map <leader>fm <Action>(GotoSymbol)
+map <leader>fa <Action>(GotoAction)
+map <leader>fu <Action>(FindUsages)
+map <leader>fU <Action>(ShowUsages)
+map <leader>fs <Action>(FileStructurePopup)
+map <leader>fl <Action>(SelectInProjectView)
+
+let g:WhichKeyDesc_files    = "<Space>f Files/Project Navigation"
+let g:WhichKeyDesc_files_ff = "<Space>ff Go to file"
+let g:WhichKeyDesc_files_fd = "<Space>fd New directory"
+let g:WhichKeyDesc_files_fn = "<Space>fn New file"
+let g:WhichKeyDesc_files_fo = "<Space>fo Open file"
+let g:WhichKeyDesc_files_fr = "<Space>fr Rename file"
+let g:WhichKeyDesc_files_fc = "<Space>fc Go to class"
+let g:WhichKeyDesc_files_fm = "<Space>fm Go to symbol"
+let g:WhichKeyDesc_files_fa = "<Space>fa Go to action"
+let g:WhichKeyDesc_files_fu = "<Space>fu Find usages"
+let g:WhichKeyDesc_files_fU = "<Space>fU Show usages"
+let g:WhichKeyDesc_files_fs = "<Space>fs File structure popup"
+let g:WhichKeyDesc_files_fl = "<Space>fl Locate file in project view"
+
+" -----------------------------
+" Code Search (<leader>s)
+" -----------------------------
+map <leader>ss <Action>(Find)
+map <leader>sr <Action>(Replace)
+map <leader>sp <Action>(FindInPath)
+map <leader>sR <Action>(ReplaceInPath)
+map <leader>sw <Action>(SearchEverywhere)
+map <leader>sh <Action>(FindWordAtCaret)
+
+let g:WhichKeyDesc_search    = "<Space>s Code Search"
+let g:WhichKeyDesc_search_ss = "<Space>ss Find in code"
+let g:WhichKeyDesc_search_sr = "<Space>sr Replace in code"
+let g:WhichKeyDesc_search_sp = "<Space>sp Find in path"
+let g:WhichKeyDesc_search_sR = "<Space>sR Replace in path"
+let g:WhichKeyDesc_search_sw = "<Space>sw Search everywhere"
+let g:WhichKeyDesc_search_sh = "<Space>sh Find word at caret"
+
+" -----------------------------
+" Goto Definitions and Implementations (<leader>g)
+" -----------------------------
+map <leader>gg <Action>(GotoDeclaration)
+map <leader>gt <Action>(GotoTest)
+map <leader>gT <Action>(GotoTypeDeclaration)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>gs <Action>(GotoSuperMethod)
+map <leader>gl <Action>(GotoLine)
+map <leader>gD <Action>(QuickTypeDefinition)
+map <leader>gh <Action>(ExpressionTypeInfo)
+
+let g:WhichKeyDesc_goto    = "<Space>g Goto"
+let g:WhichKeyDesc_goto_gg = "<Space>gg Declaration"
+let g:WhichKeyDesc_goto_gt = "<Space>gt Test"
+let g:WhichKeyDesc_goto_gT = "<Space>gT Type Declaration"
+let g:WhichKeyDesc_goto_gi = "<Space>gi Implementation"
+let g:WhichKeyDesc_goto_gs = "<Space>gs Super Method"
+let g:WhichKeyDesc_goto_gl = "<Space>gl Go to line"
+let g:WhichKeyDesc_goto_gD = "<Space>gD Quick type definition"
+let g:WhichKeyDesc_goto_gh = "<Space>gh Expression type info"
+
+" -----------------------------
+" LSP / Hover / Info (<leader>l)
+" -----------------------------
+map <leader>li <Action>(QuickImplementations)
+map <leader>ls <Action>(ViewSource)
+map <leader>lh <Action>(ShowHoverInfo)
+
+let g:WhichKeyDesc_lsp    = "<Space>l LSP / Hover / Info"
+let g:WhichKeyDesc_lsp_li = "<Space>li Quick implementations"
+let g:WhichKeyDesc_lsp_ls = "<Space>ls View source"
+let g:WhichKeyDesc_lsp_lh = "<Space>lh Show hover info"
+
+" -----------------------------
+" Refactorings (<leader>r)
+" -----------------------------
+map <leader>rr <Action>(RenameElement)
+map <leader>rm <Action>(ExtractMethod)
+map <leader>rv <Action>(IntroduceVariable)
+map <leader>rf <Action>(IntroduceField)
+map <leader>rc <Action>(ChangeSignature)
+map <leader>rq <Action>(Refactorings.QuickListPopupAction)
+
+let g:WhichKeyDesc_refactor    = "<Space>r Refactorings"
+let g:WhichKeyDesc_refactor_rr = "<Space>rr Rename element"
+let g:WhichKeyDesc_refactor_rm = "<Space>rm Extract method"
+let g:WhichKeyDesc_refactor_rv = "<Space>rv Introduce variable"
+let g:WhichKeyDesc_refactor_rf = "<Space>rf Introduce field"
+let g:WhichKeyDesc_refactor_rc = "<Space>rc Change signature"
+let g:WhichKeyDesc_refactor_rq = "<Space>rq Quick refactoring list"
+
+" -----------------------------
+" Code Tools (<leader>c)
+" -----------------------------
+map <leader>ca <Action>(ShowIntentionActions)
+map <leader>cs <Action>(SurroundWith)
+map <leader>cg <Action>(Generate)
+map <leader>cd <Action>(EditorDuplicateLines)
+map <leader>cc <Action>(EditorCompleteStatement)
+map <leader>cf <Action>(ReformatCode)
+map <leader>co <Action>(OptimizeImports)
+map <leader>cr <Action>(RearrangeCode)
+
+let g:WhichKeyDesc_tools    = "<Space>c Code Tools"
+let g:WhichKeyDesc_tools_ca = "<Space>ca Intention actions"
+let g:WhichKeyDesc_tools_cs = "<Space>cs Surround with"
+let g:WhichKeyDesc_tools_cg = "<Space>cg Generate code"
+let g:WhichKeyDesc_tools_cd = "<Space>cd Duplicate lines"
+let g:WhichKeyDesc_tools_cc = "<Space>cc Complete statement"
+let g:WhichKeyDesc_tools_cf = "<Space>cf Reformat code"
+let g:WhichKeyDesc_tools_co = "<Space>co Optimize imports"
+let g:WhichKeyDesc_tools_cr = "<Space>cr Rearrange code"
+
+" -----------------------------
+" Navigation & History (<leader>n)
+" -----------------------------
+map <leader>ne <Action>(GotoNextError)
+map <leader>nE <Action>(GotoPreviousError)
+map <leader>nl <Action>(JumpToLastChange)
+map <leader>nr <Action>(RecentLocations)
+map <leader>nf <Action>(RecentFiles)
+map <leader>nb <Action>(Back)
+map <leader>nF <Action>(Forward)
+map <leader>nu <Action>(MethodUp)
+map <leader>nd <Action>(MethodDown)
+
+let g:WhichKeyDesc_nav    = "<Space>n Navigation & History"
+let g:WhichKeyDesc_nav_ne = "<Space>ne Next error"
+let g:WhichKeyDesc_nav_nE = "<Space>nE Previous error"
+let g:WhichKeyDesc_nav_nl = "<Space>nl Jump to last change"
+let g:WhichKeyDesc_nav_nr = "<Space>nr Recent locations"
+let g:WhichKeyDesc_nav_nf = "<Space>nf Recent files"
+let g:WhichKeyDesc_nav_nb = "<Space>nb Navigate back"
+let g:WhichKeyDesc_nav_nF = "<Space>nF Navigate forward"
+let g:WhichKeyDesc_nav_nu = "<Space>nu Move method up"
+let g:WhichKeyDesc_nav_nd = "<Space>nd Move method down"
+
+" -----------------------------
+" File Info & Paths (<leader>p)
+" -----------------------------
+map <leader>pa <Action>(CopyAbsolutePath)
+map <leader>pf <Action>(CopyFileName)
+map <leader>pr <Action>(CopyContentRootPath)
+
+let g:WhichKeyDesc_paths    = "<Space>p File Info & Paths"
+let g:WhichKeyDesc_paths_pa = "<Space>pa Copy absolute path"
+let g:WhichKeyDesc_paths_pf = "<Space>pf Copy file name"
+let g:WhichKeyDesc_paths_pr = "<Space>pr Copy content root path"
+
+" -----------------------------
+" Session & Editor Management (<leader>q)
+" -----------------------------
+map <leader>qs <Action>(NewScratchFile)
+map <leader>qq <Action>(CloseContent)
+map <leader>qa <Action>(CloseAllEditors)
+map <leader>qR <Action>(RestartIde)
+
+let g:WhichKeyDesc_session    = "<Space>q Session & Editor Management"
+let g:WhichKeyDesc_session_qs = "<Space>qs New scratch file"
+let g:WhichKeyDesc_session_qq = "<Space>qq Close current content"
+let g:WhichKeyDesc_session_qa = "<Space>qa Close all editors"
+let g:WhichKeyDesc_session_qR = "<Space>qR Restart IDE"
+
+" -----------------------------
+" Project Management (<leader>p)
+" -----------------------------
+map <leader>po <Action>(ManageRecentProjects)
+map <leader>pc <Action>(CloseProject)
+map <leader>pn <Action>(NewProject)
+
+let g:WhichKeyDesc_projects    = "<Space>p Project Management"
+let g:WhichKeyDesc_projects_po = "<Space>po Recent project"
+let g:WhichKeyDesc_projects_pc = "<Space>pc Close project"
+let g:WhichKeyDesc_projects_pn = "<Space>pn New project"
+
+" -----------------------------
+" Tool Windows (<leader>t)
+" -----------------------------
+map <leader>tp <Action>(ActivateProjectToolWindow)
+map <leader>tt <Action>(ActivateTerminalToolWindow)
+map <leader>tc <Action>(ActivateCommitToolWindow)
+map <leader>tg <Action>(ActivateVersionControlToolWindow)
+map <leader>ts <Action>(ActivateServicesToolWindow)
+map <leader>tb <Action>(ActivateBuildToolWindow)
+map <leader>tn <Action>(CloseAllNotifications)
+map <leader>tr <action>(ActivateRunToolWindow)
+map <leader>ta <action>(AIAssistant.ToolWindow.ShowOrFocus)
+
+let g:WhichKeyDesc_toolswin    = "<Space>t Tool Windows"
+let g:WhichKeyDesc_toolswin_tp = "<Space>tp Activate project tool window"
+let g:WhichKeyDesc_toolswin_tt = "<Space>tt Activate terminal tool window"
+let g:WhichKeyDesc_toolswin_tc = "<Space>tc Activate commit tool window"
+let g:WhichKeyDesc_toolswin_tg = "<Space>tg Activate version control tool window"
+let g:WhichKeyDesc_toolswin_ts = "<Space>ts Activate services tool window"
+let g:WhichKeyDesc_toolswin_tb = "<Space>tb Activate build tool window"
+let g:WhichKeyDesc_toolswin_tr = "<Space>tr Activate run tool window"
+let g:WhichKeyDesc_toolswin_ta = "<Space>ta Activate ai assistance tool window"
+let g:WhichKeyDesc_toolswin_tn = "<Space>tn Close all notifications"
+
+" -----------------------------
+" Git (<leader>v)
+" -----------------------------
+map <leader>vp <Action>(Vcs.Push)
+map <leader>vu <Action>(UpdateProject)
+map <leader>vc <Action>(CheckinFiles)
+map <leader>va <Action>(Annotate)
+map <leader>vb <Action>(Git.Branches)
+map <leader>vn <Action>(GitNewBranchAction)
+map <leader>vh <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>vd <Action>(Compare.SameVersion)
+map <leader>vs <Action>(Git.Stash)
+map <leader>vr <Action>(ChangesView.Revert)
+map <leader>vf <Action>(Git.Add)
+
+let g:WhichKeyDesc_git   = "<Space>v Git"
+let g:WhichKeyDesc_git_vp = "<Space>vp Vcs.Push"
+let g:WhichKeyDesc_git_vu = "<Space>vu UpdateProject"
+let g:WhichKeyDesc_git_vc = "<Space>vc CheckinFiles"
+let g:WhichKeyDesc_git_va = "<Space>va Annotate"
+let g:WhichKeyDesc_git_vb = "<Space>vb Git.Branches"
+let g:WhichKeyDesc_git_vn = "<Space>vn GitNewBranchAction"
+let g:WhichKeyDesc_git_vh = "<Space>vh Vcs.ShowTabbedFileHistory"
+let g:WhichKeyDesc_git_vd = "<Space>vd Compare.SameVersion"
+let g:WhichKeyDesc_git_vs = "<Space>vs Git.Stash"
+let g:WhichKeyDesc_git_vr = "<Space>vr ChangesView.Revert"
+let g:WhichKeyDesc_git_vf = "<Space>vf Add file"
+
+" -----------------------------
+" Execute (<leader>e)
+" -----------------------------
+map <leader>ee <Action>(Run)
+map <leader>er <Action>(Rerun)
+map <leader>ed <Action>(Debug)
+map <leader>es <Action>(Stop)
+map <leader>ec <Action>(ChooseRunConfiguration)
+
+let g:WhichKeyDesc_execute    = "<Space>e Execute"
+let g:WhichKeyDesc_execute_ee = "<Space>ee Run"
+let g:WhichKeyDesc_execute_er = "<Space>er Rerun"
+let g:WhichKeyDesc_execute_ed = "<Space>rd Debug"
+let g:WhichKeyDesc_execute_es = "<Space>rs Stop"
+let g:WhichKeyDesc_execute_ec = "<Space>rc Choose run configuration"

@@ -1,0 +1,8 @@
+[tools]
+go = "1.24.3"
+java = "temurin-21.0.5+11.0.LTS"
+maven = "3.9.9"
+node = "22.15.1"
+python = "3.13.3"
+rust = "stable"
+yarn = "4.9.1"
