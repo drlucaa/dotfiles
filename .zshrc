@@ -1,6 +1,5 @@
-# Set up Homebrew's zsh completion functions
 fpath=("$(brew --prefix)/share/zsh/site-functions" $fpath)
-fpath=(/Users/luca.fondo/.docker/completions $fpath)
+fpath=("$HOME/.docker/completions" $fpath)
 
 source ~/.zsh_aliases
 
