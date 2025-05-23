@@ -11,6 +11,12 @@
     }
   },
   {
+    "context": "Terminal",
+    "bindings": {
+      "space t t": "workspace::ToggleBottomDock"
+    }
+  },
+  {
     "context": "EmptyPane || SharedScreen",
     "bindings": {
       // Open file finder
@@ -24,7 +30,15 @@
       // File explorer
       "space e": "workspace::ToggleLeftDock",
       // Quit zed
-      "space q q": "workspace::CloseWindow"
+      "space q q": "workspace::CloseWindow",
+      // Git
+      "space g g": [
+        "task::Spawn",
+        {
+          "task_name": "lazygit",
+          "reveal_target": "center"
+        }
+      ]
     }
   },
   {
@@ -55,7 +69,8 @@
       "shift-g": "menu::SelectLast",
       "g g": "menu::SelectFirst",
       "-": "project_panel::SelectParent",
-      "ctrl-6": "pane::AlternateFile"
+      "ctrl-6": "pane::AlternateFile",
+      "shift-o": "project_panel::RevealInFileManager"
     }
   },
   {
@@ -130,7 +145,9 @@
       "shift-l": "pane::ActivateNextItem",
       // Open markdown preview
       "space m p": "markdown::OpenPreview",
-      "space m P": "markdown::OpenPreviewToTheSide"
+      "space m P": "markdown::OpenPreviewToTheSide",
+      // Reveal in Finder
+      "space f r": "editor::RevealInFileManager"
     }
   },
   {
