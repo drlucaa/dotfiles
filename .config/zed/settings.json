@@ -8,7 +8,7 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -69,9 +69,7 @@
     "coloring": "indent_aware"
   },
   "autosave": "on_focus_change",
-  "soft_wrap": "preferred_line_length",
-  "preferred_line_length": 120,
-  "show_wrap_guides": true,
+  "soft_wrap": "editor_width",
   "search": {
     "whole_word": false,
     "case_sensitive": true,
@@ -157,9 +155,9 @@
     "dock": "right",
     "button": false
   },
-  "notification_panel": {
-    "button": false
-  },
+  // "notification_panel": {
+  //   "button": false
+  // },
   "collaboration_panel": {
     "dock": "left",
     "button": false
@@ -170,5 +168,11 @@
   },
   "chat_panel": {
     "dock": "right"
+  },
+  "languages": {
+    "Rust": {
+      "formatter": "language_server",
+      "format_on_save": "language_server"
+    }
   }
 }
