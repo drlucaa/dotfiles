@@ -127,7 +127,10 @@
       "space w d": "pane::CloseAllItems",
       // Buffer navigation
       "shift-h": "pane::ActivatePreviousItem",
-      "shift-l": "pane::ActivateNextItem"
+      "shift-l": "pane::ActivateNextItem",
+      // Open markdown preview
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide"
     }
   },
   {
