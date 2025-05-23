@@ -151,6 +151,20 @@
     }
   },
   {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "alt-tab": null,
+      "alt-p": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      // bind the same key here too
+      "alt-p": "editor::AcceptEditPrediction"
+    }
+  },
+  {
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
       // Line's Motions
