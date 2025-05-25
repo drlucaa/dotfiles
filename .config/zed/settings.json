@@ -173,6 +173,10 @@
     "Rust": {
       "formatter": "language_server",
       "format_on_save": "language_server"
+    },
+    "Go": {
+      "formatter": "language_server",
+      "format_on_save": "language_server"
     }
   }
 }
