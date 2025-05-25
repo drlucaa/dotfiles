@@ -13,7 +13,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "space t t": "workspace::ToggleBottomDock"
+      "space q t": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -31,6 +31,8 @@
       "space e": "workspace::ToggleLeftDock",
       // Quit zed
       "space q q": "workspace::CloseWindow",
+      // Terminal
+      "space t": "workspace::ToggleBottomDock",
       // Git
       "space g g": [
         "task::Spawn",
