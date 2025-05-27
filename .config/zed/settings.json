@@ -167,6 +167,9 @@
     "dock": "right"
   },
   "languages": {
+    "Java": {
+      "format_on_save": "off"
+    },
     "Rust": {
       "formatter": "language_server",
       "format_on_save": "language_server"
