@@ -21,10 +21,21 @@
   "agent": {
     "model_parameters": [],
     "default_model": {
-      "provider": "ollama",
-      "model": "JetBrains/Mellum-4b-base"
+      "provider": "google",
+      "model": "gemini-2.5-pro-preview-05-06"
     },
     "version": "2"
+  },
+  "language_models": {
+    "google": {
+      "available_models": [
+        {
+          "name": "gemini-2.5-pro-preview-05-06",
+          "display_name": "Gemini 2.5 Prooo",
+          "max_tokens": 250000
+        }
+      ]
+    }
   },
   "telemetry": {
     "diagnostics": false,
@@ -32,7 +43,7 @@
   },
   "ui_font_size": 16,
   "buffer_font_size": 16,
-  "theme": "GitHub Dark Default",
+  "theme": "One Dark Pro",
   "ui_font_family": "Monaspace Neon",
   "buffer_font_family": "Monaspace Neon",
   "vim_mode": true,
@@ -81,20 +92,6 @@
   },
   "inlay_hints": {
     "enabled": true
-  },
-  "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434",
-      "available_models": [
-        {
-          "name": "JetBrains/Mellum-4b-base",
-          "display_name": "mellum",
-          "max_tokens": 16384,
-          "supports_tools": true,
-          "keep_alive": "120s"
-        }
-      ]
-    }
   },
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
