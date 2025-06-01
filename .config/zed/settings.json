@@ -97,7 +97,8 @@
   },
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
-    "JSON": ["json", "jsonc", "*.code-snippets"]
+    "JSON": ["json", "jsonc", "*.code-snippets"],
+    "Bazel": ["BUILD", "BUILD.bazel", "MODULE", "MODULE.bazel", "*.bzl"]
   },
   "file_scan_exclusions": [
     "**/.git",
@@ -176,6 +177,14 @@
     "Go": {
       "formatter": "language_server",
       "format_on_save": "language_server"
+    },
+    "Starlark": {
+      "formatter": {
+        "external": {
+          "command": "buildifier",
+          "arguments": ["-"] // Reads from stdin
+        }
+      }
     }
   }
 }
