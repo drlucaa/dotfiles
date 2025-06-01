@@ -101,13 +101,14 @@
           "reveal_target": "center"
         }
       ],
-      "space g h d": "editor::ExpandAllDiffHunks",
-      "space g h D": "git::Diff",
-      "space g h r": "git::Restore",
-      "space g h R": "git::RestoreFile",
+      "space g d": "editor::ExpandAllDiffHunks",
+      "space g D": "git::Diff",
+      "space g r": "git::Restore",
+      "space g R": "git::RestoreFile",
       "space g b": "git::CheckoutBranch",
       "space g B": "git::Blame",
       "space g p": "git::Pull",
+      "space g f": "git::Fetch",
       // Toggle inlay hints
       "space u i": "editor::ToggleInlayHints",
       // Toggle inline diagnostics
