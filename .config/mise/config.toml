@@ -5,3 +5,6 @@ node = "22.15.1"
 python = "3.13.3"
 rust = "stable"
 yarn = "4.9.1"
+
+[settings]
+experimental = true
