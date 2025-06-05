@@ -168,6 +168,7 @@ alt-shift-f = 'fullscreen'
 
 alt-f = 'exec-and-forget open -a /System/Library/CoreServices/Finder.app'
 alt-i = 'exec-and-forget open -a /Applications/IntelliJ\ IDEA\ Ultimate.app'
+alt-b = 'exec-and-forget open -a /Applications/Zen.app'
 alt-a = 'exec-and-forget open -a /Applications/Arc.app'
 alt-c = 'exec-and-forget open -a /Applications/ChatGPt.app'
 alt-e = 'exec-and-forget open -a /Applications/Zed.app/'
