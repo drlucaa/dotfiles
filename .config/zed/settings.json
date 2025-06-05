@@ -92,9 +92,6 @@
   "file_finder": {
     "modal_max_width": "medium"
   },
-  "inlay_hints": {
-    "enabled": true
-  },
   "file_types": {
     "Dockerfile": ["Dockerfile", "Dockerfile.*"],
     "JSON": ["json", "jsonc", "*.code-snippets"],
