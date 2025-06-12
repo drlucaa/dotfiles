@@ -172,7 +172,7 @@ alt-b = 'exec-and-forget open -a /Applications/Zen.app'
 alt-a = 'exec-and-forget open -a /Applications/Arc.app'
 alt-c = 'exec-and-forget open -a /Applications/ChatGPt.app'
 alt-e = 'exec-and-forget open -a /Applications/Zed.app/'
-alt-enter = 'exec-and-forget open -a /Applications/Warp.app/'
+alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app/'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
