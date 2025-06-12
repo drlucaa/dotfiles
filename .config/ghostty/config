@@ -1,0 +1,6 @@
+theme = "OneHalfDark"
+font-size = 16
+font-family = "Monaspace Neon Var ExtraLight Light"
+background-blur-radius = 20
+mouse-hide-while-typing = true
+window-decoration = true
