@@ -6,8 +6,8 @@ if status is-interactive
     abbr zj zellij
 
     # Set Editor Variable
-    set -gx EDITOR "zed --wait"
-    set -gx VISUAL "zed --wait"
+    set -gx EDITOR nvim
+    set -gx VISUAL nvim
 
     # Initialize tools
     starship init fish | source
