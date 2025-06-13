@@ -22,6 +22,11 @@ return {
       },
       -- only save buffers with these filetypes
       condition = function(buf)
+        buf = buf or vim.api.nvim_get_current_buf()
+        if not vim.api.nvim_buf_is_valid(buf) then
+          return false
+        end
+
         local ft = vim.bo[buf].filetype
         local allowed = {
           go = true,
