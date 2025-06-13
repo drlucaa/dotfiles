@@ -174,27 +174,27 @@ enter_accept = true
 [stats]
 ## Set commands where we should consider the subcommand for statistics. Eg, kubectl get vs just kubectl
 common_subcommands = [
-    #   "apt",
-    "cargo",
-    #   "composer",
-    #   "dnf",
-    "docker",
-    "git",
-    "go",
-    #   "ip",
-    #   "jj",
-    "kubectl",
-    #   "nix",
-    #   "nmcli",
-    "npm",
-    #   "pecl",
-    #   "pnpm",
-    #   "podman",
-    #   "port",
-    #   "systemctl",
-    "tmux",
-    "yarn",
-    "bazel",
+  #   "apt",
+  "cargo",
+  #   "composer",
+  #   "dnf",
+  "docker",
+  "git",
+  "go",
+  #   "ip",
+  #   "jj",
+  "kubectl",
+  #   "nix",
+  #   "nmcli",
+  "npm",
+  #   "pecl",
+  #   "pnpm",
+  #   "podman",
+  #   "port",
+  #   "systemctl",
+  "tmux",
+  "yarn",
+  "bazel",
 ]
 
 ## Set commands that should be totally stripped and ignored from stats
@@ -224,7 +224,7 @@ records = true
 
 [daemon]
 ## Enables using the daemon to sync. Requires the daemon to be running in the background. Start it with `atuin daemon`
-# enabled = false
+enabled = false
 
 ## How often the daemon should sync in seconds
 # sync_frequency = 300
