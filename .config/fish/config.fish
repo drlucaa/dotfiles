@@ -1,7 +1,9 @@
 # Interactive context
 if status is-interactive
     # Set Abbreviations
-    abbr lg 'lazygit'
+    abbr lg lazygit
+    abbr vim nvim
+    abber zj zellij
 
     # Set Editor Variable
     set -gx EDITOR "zed --wait"
