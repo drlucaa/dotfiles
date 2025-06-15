@@ -22,5 +22,7 @@ if status is-interactive
     end
 end
 
-# Add shims for non interactive contexts
-mise activate fish --shims | source
+if not status is-interactive
+    # Add shims for non interactive contexts
+    mise activate fish --shims | source
+end
