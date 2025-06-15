@@ -4,7 +4,7 @@ add_newline = false
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [golang]
-format = '[ ](bold cyan)'
+format = '[ $version ](bold cyan)'
 
 [docker_context]
 symbol = ""
