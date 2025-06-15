@@ -9,3 +9,9 @@ format = '[ ](bold cyan)'
 [docker_context]
 symbol = ""
 style = "bold blue"
+
+[kubernetes]
+symbol = '☸ '
+disabled = true
+detect_files = ['Dockerfile']
+format = '[$symbol$context( \($namespace\))]($style) '
