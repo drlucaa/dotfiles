@@ -1,7 +1,7 @@
 add_newline = false
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style)'
+format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [golang]
 format = '[ ](bold cyan)'
