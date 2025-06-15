@@ -1,7 +1,7 @@
 # Interactive context
 if status is-interactive
     # Set Abbreviations
-    abbr lg lazygit
+    abbr gg lazygit
     abbr vim nvim
     abbr zj zellij
 
