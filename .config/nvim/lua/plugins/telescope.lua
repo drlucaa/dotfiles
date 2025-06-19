@@ -1,6 +1,7 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
+    enabled = false,
     config = function()
       local ts = require("telescope")
       local h_pct = 0.90
