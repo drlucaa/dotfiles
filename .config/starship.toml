@@ -1,5 +1,12 @@
 add_newline = false
 
+[git_status]
+style = "purple bold"
+staged = "✔"
+modified = "!"
+untracked = "+"
+conflicted = "✖"
+
 [git_branch]
 format = '[$symbol$branch(:$remote_branch)]($style) '
 
