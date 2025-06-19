@@ -4,6 +4,7 @@ if status is-interactive
     abbr gg lazygit
     abbr vim nvim
     abbr zj zellij
+    abbr ll ls -alF
 
     # Set Editor Variable
     set -gx EDITOR nvim
