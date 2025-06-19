@@ -1,0 +1,15 @@
+[[ssh-keys]]
+item = "DVB GitLab Key"
+vault = "Employee"
+
+[[ssh-keys]]
+item = "Private GitLab Key"
+vault = "Private"
+
+[[ssh-keys]]
+item = "Private Github Key"
+vault = "Private"
+
+[[ssh-keys]]
+item = "Git Signing Key"
+vault = "Private"
