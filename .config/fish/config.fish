@@ -7,8 +7,8 @@ if status is-interactive
     abbr ll ls -alF
 
     # Set Editor Variable
-    set -gx EDITOR nvim
-    set -gx VISUAL nvim
+    set -gx EDITOR hx
+    set -gx VISUAL hx
     set -gx LANG en_US.UTF-8
 
     # Initialize tools
