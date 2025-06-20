@@ -22,7 +22,7 @@ focus-lost = true
 hidden = false
 
 [editor.statusline]
-left = ["mode", "spinner", "version-control"]
+left = ["mode", "spinner"]
 center = ["file-name", "file-modification-indicator"]
 right = [
   "diagnostics",
@@ -38,6 +38,7 @@ mode.select = "SELECT"
 
 [keys.normal]
 "C-s" = ":write!"
+"C-j" = "save_selection"
 
 [keys.normal.space]
 "q" = { "q" = ":quit-all", s = ":write-quit-all!", f = ":quit-all!" }
