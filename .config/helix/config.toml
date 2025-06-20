@@ -39,6 +39,7 @@ mode.select = "SELECT"
 [keys.normal]
 "C-s" = ":write!"
 "C-j" = "save_selection"
+"C-x" = ":reset-diff-change"
 
 [keys.normal.space]
 "q" = { "q" = ":quit-all", s = ":write-quit-all!", f = ":quit-all!" }
