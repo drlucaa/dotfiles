@@ -44,6 +44,7 @@ mode.select = "SELECT"
 [keys.normal.space]
 "q" = { "q" = ":quit-all", s = ":write-quit-all!", f = ":quit-all!" }
 "space" = "file_picker"
+"b" = { f = "buffer_picker", w = ":buffer-close", o = ":buffer-close-others", s = ":write-buffer-close"}
 
 [keys.insert]
 "j" = { j = "normal_mode" }
