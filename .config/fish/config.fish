@@ -31,6 +31,10 @@ if status is-interactive
         jj commit -m $argv[2]; and jj bookmark move $argv[1] --to @-
     end
 
+    function jgpa
+        jj git push --allow-new
+    end
+
     function atuin_sync_on_exit --on-event fish_exit
         if test -x (command -v atuin)
             atuin sync >/dev/null 2>&1
