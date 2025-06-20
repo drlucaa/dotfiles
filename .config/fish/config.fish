@@ -5,6 +5,7 @@ if status is-interactive
     abbr vim nvim
     abbr zj zellij
     abbr ll ls -alF
+    abbr lj lazyjj
 
     # Set Editor Variable
     set -gx EDITOR hx
