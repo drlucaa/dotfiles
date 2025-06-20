@@ -7,7 +7,7 @@ email = "luca.fondo@trai.ch"
 [signing]
 behavior = "drop"
 backend = "ssh"
-key = "Git Signing Key"
+key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEczwOyJv9eAYANotcE0iB8dlFOWT1WE1ce8EgVHtp6X"
 
 [git]
 sign-on-push = true
