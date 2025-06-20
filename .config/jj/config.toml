@@ -11,3 +11,6 @@ key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEczwOyJv9eAYANotcE0iB8dlFOWT1WE1ce8E
 
 [git]
 sign-on-push = true
+
+[ui]
+default-command = "log"
