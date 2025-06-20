@@ -53,11 +53,6 @@ if.app-id = 'com.electron.dockerdesktop'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.jetbrains.intellij'
-if.window-title-regex-substring = 'Welcome'
-run = 'layout floating'
-
-[[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
 run = 'layout floating'
 
@@ -167,7 +162,6 @@ alt-shift-9 = ['move-node-to-workspace 9']
 alt-shift-f = 'fullscreen'
 
 alt-f = 'exec-and-forget open -a /System/Library/CoreServices/Finder.app'
-alt-i = 'exec-and-forget open -a /Applications/IntelliJ\ IDEA\ Ultimate.app'
 alt-b = 'exec-and-forget open -a /Applications/Zen.app'
 alt-a = 'exec-and-forget open -a /Applications/Arc.app'
 alt-c = 'exec-and-forget open -a /Applications/ChatGPt.app'
