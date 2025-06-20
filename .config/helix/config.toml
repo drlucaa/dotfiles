@@ -37,10 +37,10 @@ mode.insert = "INSERT"
 mode.select = "SELECT"
 
 [keys.normal]
-"C-s" = ":write"
+"C-s" = ":write!"
 
 [keys.normal.space]
-"q" = { "q" = ":quit-all", s = ":write-quit-all", f = ":quit-all!" }
+"q" = { "q" = ":quit-all", s = ":write-quit-all!", f = ":quit-all!" }
 "space" = "file_picker"
 
 [keys.insert]
