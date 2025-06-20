@@ -11,6 +11,7 @@ if status is-interactive
     set -gx EDITOR hx
     set -gx VISUAL hx
     set -gx LANG en_US.UTF-8
+    set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
 
     # Initialize tools
     starship init fish | source
