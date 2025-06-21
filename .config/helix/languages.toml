@@ -13,3 +13,20 @@ name = "go"
 roots = ["go.work", "go.mod"]
 auto-format = true
 formatter = ["gofmt"]
+
+[[language]]
+name = "yaml"
+auto-format = true
+formatter = { command = "prettier", args = ["--parser", "yaml"] }
+
+[[language]]
+name = "dockerfile"
+language-servers = ["docker-lsp"]
+
+[[language]]
+name = "docker-compose"
+language-servers = ["docker-lsp", "yaml-language-server"]
+
+[language-server.docker-lsp]
+command = "docker-language-server"
+args = ["start"]
