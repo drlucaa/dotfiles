@@ -27,7 +27,7 @@ if status is-interactive
         jj commit -m $argv
     end
 
-    function jgpa --description "JJ push and allow new"
+    function jpa --description "JJ push and allow new"
         jj git push --allow-new
     end
 
