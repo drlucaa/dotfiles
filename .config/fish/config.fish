@@ -23,15 +23,11 @@ if status is-interactive
         mkdir -- $argv; and cd -- $argv
     end
 
-    function jcm
+    function jcm --description "JJ commit with message"
         jj commit -m $argv
     end
 
-    function jcmb
-        jj commit -m $argv[2]; and jj bookmark move $argv[1] --to @-
-    end
-
-    function jgpa
+    function jgpa --description "JJ push and allow new"
         jj git push --allow-new
     end
 
