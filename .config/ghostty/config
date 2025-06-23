@@ -5,4 +5,4 @@ background-blur-radius = 20
 mouse-hide-while-typing = true
 window-decoration = true
 shell-integration = fish
-background-opacity = 0.90
+# background-opacity = 0.90
