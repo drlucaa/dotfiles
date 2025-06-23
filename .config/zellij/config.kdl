@@ -126,9 +126,6 @@ keybinds clear-defaults=true {
     shared_except "locked" "resize" {
         bind "Ctrl n" { SwitchToMode "resize"; }
     }
-    shared_except "normal" "locked" "entersearch" {
-        bind "enter" { SwitchToMode "normal"; }
-    }
     shared_except "normal" "locked" "entersearch" "renametab" "renamepane" {
         bind "esc" { SwitchToMode "locked"; }
     }
