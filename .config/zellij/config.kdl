@@ -3,6 +3,7 @@ keybinds clear-defaults=true {
         bind "Ctrl g" { SwitchToMode "normal"; }
         bind "Ctrl p" { SwitchToMode "pane"; }
         bind "Ctrl t" { SwitchToMode "tab"; }
+        bind "Ctrl q" { Quit; }
     }
     pane {
         bind "left" { MoveFocus "left"; SwitchToMode "locked"; }
@@ -115,7 +116,6 @@ keybinds clear-defaults=true {
     }
     shared_except "locked" {
         bind "Ctrl g" { SwitchToMode "locked"; }
-        bind "Ctrl q" { Quit; }
     }
     shared_except "locked" "move" {
         bind "Ctrl h" { SwitchToMode "move"; }
