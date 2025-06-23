@@ -1,10 +1,48 @@
 add_newline = false
 
+format = """
+$username\
+$directory\
+$git_branch\
+$custom\
+$git_status\
+$rust\
+$golang\
+$nodejs\
+$java\
+$time\
+$line_break$character
+"""
+
+[git_status]
+style = "purple bold"
+staged = "✔"
+modified = "!"
+untracked = "+"
+conflicted = "✖"
+
+[git_branch]
+only_attached = true
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[golang]
+format = '[ $version](bold cyan) '
+
+[docker_context]
+symbol = ""
+style = "bold blue"
+
+[kubernetes]
+symbol = '☸ '
+disabled = true
+detect_files = ['Dockerfile']
+format = '[$symbol$context( \($namespace\))]($style) '
+
 # custom module for jj status
 [custom.jj]
 description = 'Current jj status'
 # A thematic symbol for Jujutsu. The space at the end is for padding.
-symbol = "🥋 "
+symbol = " "
 # This command is your original logic, it works perfectly.
 command = '''
 jj root > /dev/null && jj log --revisions "@" --no-pager --no-graph --ignore-working-copy --color always --limit 1 --template '
@@ -31,30 +69,7 @@ jj root > /dev/null && jj log --revisions "@" --no-pager --no-graph --ignore-wor
 # Use Starship's format string to combine the symbol and the command's output.
 # The output of the `command` above is captured in the `$output` variable.
 format = '[$symbol$output]($style) '
-style = "blue bold"
+style = "purple bold"
 # This condition ensures the module only runs inside a jj repo.
 when = 'test -d .jj'
 ignore_timeout = true
-
-[git_status]
-style = "purple bold"
-staged = "✔"
-modified = "!"
-untracked = "+"
-conflicted = "✖"
-
-[git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style) '
-
-[golang]
-format = '[ $version](bold cyan) '
-
-[docker_context]
-symbol = ""
-style = "bold blue"
-
-[kubernetes]
-symbol = '☸ '
-disabled = true
-detect_files = ['Dockerfile']
-format = '[$symbol$context( \($namespace\))]($style) '
