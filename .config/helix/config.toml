@@ -5,6 +5,7 @@ true-color = true
 line-number = "relative"
 mouse = false
 default-yank-register = "+"
+clipboard-provider = "pasteboard"
 end-of-line-diagnostics = "hint"
 
 [editor.inline-diagnostics]
@@ -28,6 +29,17 @@ hidden = false
 
 [editor.soft-wrap]
 enable = true
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
 
 [editor.statusline]
 left = ["mode", "spinner"]
