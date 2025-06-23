@@ -14,6 +14,7 @@ brew "jj"
 brew "lazygit"
 brew "lazyjj"
 brew "markdown-oxide"
+brew "mdless"
 brew "mise"
 brew "mas" # Mac App Store manager
 brew "neovim"
