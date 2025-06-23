@@ -112,8 +112,9 @@ history_filter = [
   "^exit",
   "^lazygit",
   "^nvim",
-  "^zellij",
-  "^hx",
+  "^zellij$",
+  "^hx$",
+  "jj$",
 ]
 
 ## prevent commands run with cwd matching any of these regexes from being written
