@@ -16,3 +16,4 @@ track-default-bookmark-on-clone = true
 
 [ui]
 default-command = "log"
+diff-editor = ":builtin"
