@@ -48,4 +48,8 @@ auto-format = true
 name = "typescript"
 auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-# config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
+
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
