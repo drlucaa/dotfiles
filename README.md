@@ -50,4 +50,3 @@ then uncomment or add the following line:
 ```
 auth       sufficient     pam_tid.so
 ```
-
