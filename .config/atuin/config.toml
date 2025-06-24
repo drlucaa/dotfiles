@@ -114,7 +114,8 @@ history_filter = [
   "^nvim",
   "^zellij$",
   "^hx$",
-  "jj$",
+  "^jj$",
+  "^jjui",
 ]
 
 ## prevent commands run with cwd matching any of these regexes from being written
