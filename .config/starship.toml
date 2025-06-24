@@ -15,6 +15,7 @@ $line_break$character
 """
 
 [git_status]
+disabled = true
 style = "purple bold"
 staged = "✔"
 modified = "!"
