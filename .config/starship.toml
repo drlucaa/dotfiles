@@ -46,7 +46,7 @@ symbol = " "
 # This command is your original logic, it works perfectly.
 command = '''
 jj root > /dev/null \
-  && jj log --revisions "@" --no-pager --no-graph --ignore-working-copy \
+  && jj log --revisions "@" --no-pager --no-graph \
      --color always --limit 1 --template '
   separate(" ",
     change_id.shortest(4),
