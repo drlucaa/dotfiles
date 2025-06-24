@@ -45,7 +45,9 @@ description = 'Current jj status'
 symbol = " "
 # This command is your original logic, it works perfectly.
 command = '''
-jj root > /dev/null && jj log --revisions "@" --no-pager --no-graph --ignore-working-copy --color always --limit 1 --template '
+jj root > /dev/null \
+  && jj log --revisions "@" --no-pager --no-graph --ignore-working-copy \
+     --color always --limit 1 --template '
   separate(" ",
     change_id.shortest(4),
     bookmarks,
@@ -63,7 +65,8 @@ jj root > /dev/null && jj log --revisions "@" --no-pager --no-graph --ignore-wor
         description.first_line().substr(0, 29) ++ "…",
       )
     ) ++ raw_escape_sequence("\x1b[0m"),
-  )
+  )' \
+  | sed -E 's@([^[:space:]]*/)([^[:space:]]+)@\\x1b[0;35m\2\x1b[0m@g
 '
 '''
 # Use Starship's format string to combine the symbol and the command's output.
