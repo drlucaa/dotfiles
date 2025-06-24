@@ -38,12 +38,9 @@ disabled = true
 detect_files = ['Dockerfile']
 format = '[$symbol$context( \($namespace\))]($style) '
 
-# custom module for jj status
 [custom.jj]
 description = 'Current jj status'
-# A thematic symbol for Jujutsu. The space at the end is for padding.
 symbol = " "
-# This command is your original logic, it works perfectly.
 command = '''
 jj root > /dev/null \
   && jj log --revisions "@" --no-pager --no-graph \
@@ -57,22 +54,23 @@ jj root > /dev/null \
       if(hidden, "👻"),
       if(immutable, "🔒"),
     ),
-    raw_escape_sequence("\x1b[1;32m") ++ if(empty, "(empty)"),
-    raw_escape_sequence("\x1b[1;32m") ++ if(description.first_line().len() == 0,
-      "(no description set)",
-      if(description.first_line().substr(0, 29) == description.first_line(),
-        description.first_line(),
-        description.first_line().substr(0, 29) ++ "…",
+    if(empty,
+      raw_escape_sequence("\x1b[1;31m") ++ "(empty)" ++ raw_escape_sequence("\x1b[0m"),
+      ""
+    ),
+    raw_escape_sequence("\x1b[1;33m") ++
+      if(description.first_line().len() == 0,
+        "(no desc)",
+        if(description.first_line().len() <= 29,
+          description.first_line(),
+          description.first_line().substr(0, 29) ++ "…"
+        )
       )
-    ) ++ raw_escape_sequence("\x1b[0m"),
+    ++ raw_escape_sequence("\x1b[0m")
   )' \
   | sed -E 's@([^[:space:]]*/)([^[:space:]]+)@\\x1b[0;35m\2\x1b[0m@g
 '
 '''
-# Use Starship's format string to combine the symbol and the command's output.
-# The output of the `command` above is captured in the `$output` variable.
 format = '[$symbol$output]($style) '
 style = "purple bold"
-# This condition ensures the module only runs inside a jj repo.
 when = 'test -d .jj'
-ignore_timeout = true
