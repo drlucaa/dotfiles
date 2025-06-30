@@ -23,12 +23,8 @@ if status is-interactive
         mkdir -- $argv; and cd -- $argv
     end
 
-    function jcm --description "JJ commit with message"
-        jj commit -m $argv
-    end
-
-    function jpa --description "JJ push and allow new"
-        jj git push --allow-new
+    function jbm --description "JJ create bookmark at current revision"
+        jj bookmark create $argv --revision @
     end
 
     function atuin_sync_on_exit --on-event fish_exit
