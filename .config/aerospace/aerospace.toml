@@ -9,7 +9,9 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-after-startup-command = []
+after-startup-command = [
+  'exec-and-forget borders active_color=0xff8a9fab inactive_color=0xff494d64 width=6.0 hidpi=on',
+]
 
 # Start AeroSpace at login
 start-at-login = true
@@ -186,8 +188,8 @@ cmd-alt-h = [] # Disable "hide others"
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
 f = [
-    'layout floating tiling',
-    'mode main',
+  'layout floating tiling',
+  'mode main',
 ] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
@@ -210,7 +212,7 @@ w = ['exec-and-forget open -a /Applications/WhatsApp.app', 'mode main']
 f = ['exec-and-forget open -a /Applications/Fleet.app', 'mode main']
 p = ['exec-and-forget open -a /Applications/1password.app', 'mode main']
 o = [
-    'exec-and-forget open -a /Applications/Microsoft\ Outlook.app',
-    'mode main',
+  'exec-and-forget open -a /Applications/Microsoft\ Outlook.app',
+  'mode main',
 ]
 t = ['exec-and-forget open -a /Applications/Microsoft\ Teams.app', 'mode main']

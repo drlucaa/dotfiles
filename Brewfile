@@ -1,6 +1,7 @@
 # Taps
 tap "domt4/autoupdate"
 tap "nikitabobko/tap"
+tap "FelixKratz/formulae"
 
 # Binaries
 brew "atuin"
@@ -12,6 +13,7 @@ brew "git"
 brew "helix"
 brew "jj"
 brew "lazygit"
+brew "borders"
 brew "jjui"
 brew "markdown-oxide"
 brew "glow"
