@@ -75,3 +75,4 @@ jj root > /dev/null \
 format = '[$symbol$output]($style) '
 style = "purple bold"
 when = 'test -d .jj'
+ignore_timeout = true
