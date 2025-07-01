@@ -19,8 +19,12 @@ if status is-interactive
     zoxide init --cmd cd fish | source
     mise activate fish | source
 
-    function cx
+    function cx --description "Crete and move into new dir"
         mkdir -- $argv; and cd -- $argv
+    end
+
+    function jgf --description "JJ git fetch"
+        jj git fetch
     end
 
     function jbm --description "JJ create bookmark at current revision"
