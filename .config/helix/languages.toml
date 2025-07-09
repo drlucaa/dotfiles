@@ -15,6 +15,17 @@ auto-format = true
 formatter = ["gofmt"]
 
 [[language]]
+name = "plz"
+scope = "source.plz"
+file-types = ["plz"]
+roots = [".plzconfig"]
+language-servers = ["plz-lsp"]
+
+[language-server.plz-lsp]
+command = "plz"
+args = ["tool", "lsp"]
+
+[[language]]
 name = "yaml"
 auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
