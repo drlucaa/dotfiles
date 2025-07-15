@@ -20,7 +20,7 @@ if status is-interactive
     mise activate fish | source
 
     function cx --description "Crete and move into new dir"
-        mkdir -- $argv; and cd -- $argv
+        mkdir -p -- $argv; and cd -- $argv
     end
 
     function jgf --description "JJ git fetch"
