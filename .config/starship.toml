@@ -11,6 +11,7 @@ $golang\
 $nodejs\
 $java\
 $time\
+$cmd_duration\
 $line_break$character
 """
 
