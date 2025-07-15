@@ -1,33 +1,29 @@
 [[language]]
 name = "toml"
-auto-format = true
 formatter = { command = "taplo", args = ["fmt", "-"] }
 
 [[language]]
 name = "html"
-auto-format = true
 formatter = { command = "superhtml", args = ["fmt", "-"] }
 
 [[language]]
 name = "go"
 roots = ["go.work", "go.mod"]
-auto-format = true
 formatter = ["gofmt"]
 
-[[language]]
-name = "plz"
-scope = "source.plz"
-file-types = ["plz"]
-roots = [".plzconfig"]
-language-servers = ["plz-lsp"]
+# [language-server.plz-lsp]
+# command = "plz"
+# args = ["tool", "lps"]
 
-[language-server.plz-lsp]
-command = "plz"
-args = ["tool", "lsp"]
+# [[language]]
+# name = "plz"
+# scope = "source.plz"
+# file-types = ["plz", { glob = "BUILD" }]
+# roots = [".plzconfig"]
+# language-servers = ["plz-lsp"]
 
 [[language]]
 name = "yaml"
-auto-format = true
 formatter = { command = "prettier", args = ["--parser", "yaml"] }
 
 [[language]]
@@ -53,14 +49,11 @@ formatter = { command = 'prettier', args = ["--parser", "css"] }
 [[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
-auto-format = true
 
 [[language]]
 name = "typescript"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 
 [[language]]
 name = "markdown"
-auto-format = true
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
