@@ -46,7 +46,7 @@
   "theme": "GitHub Dark Default",
   "ui_font_family": "Monaspace Neon",
   "buffer_font_family": "Monaspace Neon",
-  "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "use_system_clipboard": "always"
   },
