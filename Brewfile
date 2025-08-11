@@ -6,6 +6,7 @@ tap "FelixKratz/formulae"
 # Binaries
 brew "atuin"
 brew "bat"
+brew "buf"
 brew "fd"
 brew "fish"
 brew "fzf"
