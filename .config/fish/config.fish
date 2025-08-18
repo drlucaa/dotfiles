@@ -24,7 +24,7 @@ if status is-interactive
     end
 
     function jgf --description "JJ git fetch"
-        jj git fetch
+        jj git fetch; and jj new main
     end
 
     function jbm --description "JJ create bookmark at current revision"
