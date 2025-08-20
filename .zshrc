@@ -42,6 +42,7 @@ alias c='clear'
 alias gg='lazygit'
 alias ju="jjui"
 alias k="kubectl"
+alias ge=gemini
 
 # Shell integrations
 eval "$(fzf --zsh)"
