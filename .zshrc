@@ -12,7 +12,7 @@ fi
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
-source ~/.zsh_aliases
+source ~/.zsh_functions
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-completions
@@ -35,7 +35,8 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls -G $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls -G $realpath'
 
 # Aliases
-alias ls='ls -alF'
+alias ls='ls -G'
+alias ll='ls -alF'
 alias c='clear'
 alias gg='lazygit'
 alias ju="jjui"
