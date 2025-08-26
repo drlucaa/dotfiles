@@ -12,6 +12,7 @@ fi
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
+source ~/.zsh_aliases
 
 # Add in zsh plugins
 zinit light zsh-users/zsh-completions
@@ -38,6 +39,7 @@ alias ls='ls -alF'
 alias c='clear'
 alias gg='lazygit'
 alias ju="jjui"
+alias k="kubectl"
 
 # Shell integrations
 eval "$(fzf --zsh)"

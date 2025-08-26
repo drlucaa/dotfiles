@@ -1,7 +1,3 @@
-alias ll="ls -alF"
-alias k="kubectl"
-alias lg="lazygit"
-
 kn() {
     kubectl config set-context --current --namespace=$1
 }
@@ -12,4 +8,8 @@ cx() {
 
 cl() {
   cd "$1" && ls -alF
+}
+
+jgf() {
+  jj git fetch && jj new main
 }
