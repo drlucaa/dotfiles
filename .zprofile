@@ -3,7 +3,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Added by Toolbox App
 export PATH="$PATH:$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
 
-eval "$(mise activate bash --shims)"
+eval "$(mise activate zsh --shims)"
 
 export EDITOR="hx"
 export VISUAL="hx"
