@@ -9,6 +9,7 @@ if status is-interactive
     abbr c clear
     abbr ls ls -G
     abbr k kubectl
+    abbr ge gemini
 
     # Set Editor Variable
     set -gx EDITOR hx
