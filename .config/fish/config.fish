@@ -6,6 +6,9 @@ if status is-interactive
     abbr zj zellij
     abbr ll ls -alF
     abbr ju jjui
+    abbr c clear
+    abbr ls ls -G
+    abbr k kubectl
 
     # Set Editor Variable
     set -gx EDITOR hx
