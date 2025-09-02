@@ -16,6 +16,7 @@ brew "FelixKratz/formulae/borders"
 brew "jjui"
 brew "markdown-oxide"
 brew "glow"
+brew "gemini-cli"
 brew "mise"
 brew "mas" # Mac App Store manager
 brew "neovim"
