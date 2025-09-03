@@ -23,6 +23,8 @@ if status is-interactive
     zoxide init --cmd cd fish | source
     mise activate fish | source
 
+    fish_add_path "$HOME/Library/Application Support/JetBrains/Toolbox/scripts"
+
     function cx --description "Crete and move into new dir"
         mkdir -p -- $argv; and cd -- $argv
     end
