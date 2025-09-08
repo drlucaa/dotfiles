@@ -162,9 +162,10 @@ alt-f = 'exec-and-forget open -a /System/Library/CoreServices/Finder.app'
 alt-b = 'exec-and-forget open -a /Applications/Zen.app'
 alt-a = 'exec-and-forget open -a /Applications/Arc.app'
 alt-c = 'exec-and-forget open -a /Applications/ChatGPt.app'
-alt-e = 'exec-and-forget open -a /Applications/Zed.app/'
-alt-g = 'exec-and-forget open -a /Applications/Ghostty.app/'
-alt-i = 'exec-and-forget open -a /Applications/IntelliJ\ IDEA\ Ultimate.app/'
+alt-e = 'exec-and-forget open -a /Applications/Zed.app'
+alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
+alt-i = 'exec-and-forget open -a /Applications/IntelliJ\ IDEA\ Ultimate.app'
+alt-p = 'exec-and-forget open -a /Applications/Linear.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
