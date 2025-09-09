@@ -10,6 +10,7 @@ if status is-interactive
     abbr ls ls -G
     abbr k kubectl
     abbr ge gemini
+    abbr nx yarn nx
 
     # Set Editor Variable
     set -gx EDITOR hx
