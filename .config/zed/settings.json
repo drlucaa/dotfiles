@@ -1,4 +1,12 @@
 {
+  "context_servers": {
+    "nx-mcp": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {}
+    }
+  },
+  "base_keymap": "JetBrains",
   "edit_predictions": {
     "mode": "eager",
     "copilot": {
@@ -11,6 +19,7 @@
     "edit_prediction_provider": "copilot"
   },
   "agent": {
+    "default_profile": "write",
     "model_parameters": [],
     "default_model": {
       "provider": "copilot_chat",
@@ -98,7 +107,12 @@
     "**/.tap",
     "**/.nyc_output",
     "**/report",
-    "**/node_modules"
+    "**/node_modules",
+    "**/.zed",
+    "**/.yarn",
+    "**/.nx",
+    "**/.jj",
+    "**/.gemini"
   ],
   "file_scan_inclusions": [".env"],
   "terminal": {
