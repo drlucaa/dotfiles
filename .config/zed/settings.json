@@ -1,4 +1,5 @@
 {
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "context_servers": {
     "nx-mcp": {
       "source": "extension",
@@ -32,7 +33,7 @@
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
-  "theme": "GitHub Dark Default",
+  "theme": "Github Dark",
   "ui_font_family": "Monaspace Neon",
   "buffer_font_family": "Monaspace Neon",
   "vim_mode": false,
