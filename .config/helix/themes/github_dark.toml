@@ -11,6 +11,7 @@
 "markup.link" = { fg = "#a5d6ff", modifiers = ["underline"] }
 "markup.quote" = { fg = "#7ee787" }
 "markup.raw" = { fg = "#79c0ff" }
+"operator" = { fg = "#79c0ff" }
 "string" = { fg = "#a5d6ff" }
 "string.regexp" = { fg = "#a5d6ff" }
 "tag" = { fg = "#2ea043" }
