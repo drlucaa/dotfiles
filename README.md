@@ -35,6 +35,14 @@ but be aware that this can ovveride the fiels in the `$HOME/dotfiles` directory.
 
 [https://vinh.dev/writing/set-up-fish-shell-macos](https://vinh.dev/writing/set-up-fish-shell-macos)
 
+## Set Global .gitignore
+
+Run this:
+
+```
+git config --global core.excludesfile ~/.gitignore
+```
+
 ## TouchID for Sudo
 
 Run this to copy the teamplte:
