@@ -16,13 +16,14 @@ hint = { fg = "green_alt" }
 "ui.statusline" = { fg = "fg" }
 "ui.linenr" = { fg = "gutter" }
 "ui.linenr.selected" = { fg = "fg" }
+"ui.virtual" = { fg = "fg_dim", modifiers = ["bold"] }
 "ui.virtual.ruler" = { bg = "ruler" }
 "ui.virtual.whitespace" = { fg = "ruler" }
 "ui.selection" = { bg = "sel" }
 "ui.selection.primary" = { bg = "sel" }
 "ui.cursor" = { modifiers = ["reversed"] }
 "ui.cursor.primary" = { modifiers = ["reversed"] }
-"ui.cursor.match" = { bg = "cursor_match", modifiers = ["bold"] }
+"ui.cursor.match" = { fg = "green", modifiers = ["underlined", "bold"] }
 "ui.cursorline.primary" = { bg = "bg_dim" }
 
 # SYNTAX HIGHLIGHTING ==============================
@@ -53,10 +54,10 @@ bg_dim = "#010409"
 bg_hover = "#161b22"
 sel = "#3c4a5d"
 fg = "#c9d1d9"
+fg_dim = "#5d626e"
 muted = "#8b949e"
 gutter = "#6e7681"
 ruler = "#484f58"
-cursor_match = "#9e6a03"
 blue = "#79c0ff"
 blue_alt = "#a5d6ff"
 purple = "#d2a8ff"
