@@ -1,4 +1,4 @@
-theme = "Github-Dark-Default"
+theme = "Github Dark Default"
 font-size = 16
 font-family = "Monaspace Neon Var"
 background-blur-radius = 20
@@ -6,3 +6,7 @@ mouse-hide-while-typing = true
 window-decoration = true
 shell-integration = fish
 # background-opacity = 0.90
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
+quick-terminal-position=center
+quick-terminal-size = 60%,40%
