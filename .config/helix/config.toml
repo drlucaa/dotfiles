@@ -8,6 +8,9 @@ default-yank-register = "+"
 clipboard-provider = "pasteboard"
 end-of-line-diagnostics = "hint"
 bufferline = "multiple"
+completion-trigger-len = 1
+completion-timeout = 5
+completion-replace = true
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
@@ -21,9 +24,6 @@ display-inlay-hints = false
 insert = "bar"
 normal = "block"
 select = "underline"
-
-[editor.auto-save]
-focus-lost = true
 
 [editor.file-picker]
 hidden = false
