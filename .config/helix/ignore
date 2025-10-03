@@ -3,5 +3,5 @@
 !.gitignore
 !.gitattributes
 !.env
+!**/mock/**
 .idea
-plz-out
