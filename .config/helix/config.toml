@@ -13,8 +13,7 @@ completion-timeout = 5
 completion-replace = true
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
-other-lines = "error"
+cursor-line = "error"
 
 [editor.lsp]
 display-progress-messages = true
@@ -38,7 +37,7 @@ skip-levels = 1
 
 [editor.whitespace.render]
 space = "all"
-tab = "all"
+tab = "none"
 nbsp = "none"
 nnbsp = "none"
 newline = "all"
