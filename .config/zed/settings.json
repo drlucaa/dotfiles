@@ -2,9 +2,14 @@
   "icon_theme": "Colored Zed Icons Theme Dark",
   "context_servers": {
     "nx-mcp": {
-      "source": "extension",
-      "enabled": true,
-      "settings": {}
+      "env": {},
+      "args": [
+        "dlx",
+        "nx-mcp@latest"
+      ],
+      "command": "pnpm",
+      "source": "custom",
+      "enabled": true
     }
   },
   "base_keymap": "JetBrains",
