@@ -11,6 +11,8 @@ if status is-interactive
     abbr k kubectl
     abbr ge gemini
     abbr nx pnpm nx
+    abbr dcu docker compose up -d
+    abbr dcd docker compose down
 
     # Set Editor Variable
     set -gx EDITOR hx
