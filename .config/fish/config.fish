@@ -4,7 +4,7 @@ if status is-interactive
     abbr gg lazygit
     abbr vim nvim
     abbr zj zellij
-    abbr ll ls -alF
+    abbr ll eza -alhF
     abbr ju jjui
     abbr c clear
     abbr ls ls -G
