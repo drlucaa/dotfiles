@@ -6,6 +6,7 @@ if status is-interactive
     abbr zj zellij
     abbr ll eza -alhF
     abbr ju jjui
+    abbr do lazydocker
     abbr c clear
     abbr ls ls -G
     abbr k kubectl
